@@ -1,0 +1,32 @@
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+import matplotlib.pyplot as plt
+Data Collection and Processing
+#loading the csv data to a Pandas DataFrame
+heart_data = pd.read_csv('/content/heart disease.csv')
+# print first 5 rows of the dataset
+heart_data.head()
+# print last 5 rows of the dataset
+heart_data.tail()
+# number of rows and columns in the dataset
+heart_data.shape
+# getting some info about the data
+heart_data.info()
+# checking for missing values
+heart_data.isnull().sum()
+# statistical measures about the data
+heart_data.describe()
+Data Visualization
+x = [2,3,4,5,6,7,8,9]
+y = [2,3,4,5,6,7,8,9]
+fig, ax = plt.subplots()
+ax.plot(x,y);
+fig, ax = plt.subplots()
+ax.bar(x,y);
+fig, ax = plt.subplots()
+ax.pie(y);
+# checking the distribution of Target Variable
+heart_data['target'].value_counts()
