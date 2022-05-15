@@ -52,3 +52,8 @@ print('Accuracy on Training data : ', training_data_accuracy)
 X_test_prediction = model.predict(X_test)
 test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
 print('Accuracy on Test data : ', test_data_accuracy)
+Model Training 2
+RANDOM FOREST CLASSIFIER
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier()
+model.fit(X_train, Y_train)
